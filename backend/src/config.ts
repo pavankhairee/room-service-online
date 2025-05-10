@@ -1,0 +1,1 @@
+export const BACKEND_URL = "postgresql://roomservice_owner:npg_BWjOL5f9hmQJ@ep-shy-lake-a1wzohwr-pooler.ap-southeast-1.aws.neon.tech/roomservice?sslmode=require"
