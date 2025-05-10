@@ -5,7 +5,7 @@ import express, { NextFunction } from 'express'
 import jwt from 'jsonwebtoken';
 const JWT_TOKEN = "ABCDEFGHIJKLMN122"
 import { authenticateAdmin, authenticateGuest } from './middleware/middlewares';
-import { BACKEND_URL } from './config'
+import { BACKEND_URL } from './config';
 const app = express();
 app.use(express.json());
 app.use(cors())
