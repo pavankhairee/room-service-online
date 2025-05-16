@@ -5,7 +5,7 @@ import express, { NextFunction } from 'express'
 import jwt from 'jsonwebtoken';
 const JWT_TOKEN = "ABCDEFGHIJKLMN122"
 import { authenticateAdmin, authenticateGuest } from './middleware/middlewares';
-import { BACKEND_URL } from './config';
+import { BACKEND_URL } from './config'
 const app = express();
 app.use(express.json());
 app.use(cors())
@@ -158,7 +158,6 @@ app.get('/app/v1/allmenu', async (req, res) => {
         allmenu: menuQuery.rows
     })
 
-
 })
 
 //get total bill
@@ -200,7 +199,7 @@ app.get('/app/v1/userInfo', authenticateAdmin, async (req, res) => {
     })
 })
 
-app.post('/app/v1/admin/signin', authenticateAdmin, async (req, res) => {
+app.post('/app/v1/admin/signin', async (req, res) => {
     const { username, password } = req.body;
     const selectQuery = `SELECT * FROM admin_users WHERE username = $1 AND password_hash = $2`
     const response = pgClient.query(selectQuery, [username, password]);
@@ -240,6 +239,15 @@ app.put('/app/admin/updateMenu', authenticateAdmin, async (req, res) => {
     res.json({
         message: "UPDATE THE MENU",
         response: response.rows[0]
+    })
+})
+
+app.get('/app/admin/allRoom', authenticateAdmin, async (req, res) => {
+    const detailsQuery = `SELECT * FROM rooms`
+    const response = await pgClient.query(detailsQuery);
+
+    res.json({
+        message: response.rows
     })
 })
 

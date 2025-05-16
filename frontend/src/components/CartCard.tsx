@@ -10,7 +10,7 @@ interface CartCardProps {
 
 export function CartCard(props: CartCardProps) {
     return (
-        <div className="bg-white shadow-md rounded-xl overflow-hidden w-72">
+        <div className="bg-white shadow-md rounded-xl overflow-hidden w-72">    
             <img
                 src={props.image}
                 alt={props.name}

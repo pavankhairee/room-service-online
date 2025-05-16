@@ -2,6 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { ItemCard } from "../components/ItemCard";
 import { CartCard } from "../components/CartCard";
+import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Button } from "../components/Buttons";
+import { Menu } from "./MenuPage";
 
 type CartItem = {
     menu_item_id: number;
@@ -51,10 +54,13 @@ export function CartPage() {
         );
     }
 
-
+    const navigate = useNavigate()
     return (
         <div className="p-4 min-h-screen">
-            <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
+            <div className="flex justify-between">
+                <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
+                <Button onClick={() => navigate("/menupage")}>Back</Button>
+            </div>
 
             {cart.length === 0 ? (
                 <p className="text-gray-500">Your cart is empty.</p>

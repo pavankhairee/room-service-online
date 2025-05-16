@@ -6,6 +6,10 @@ import { Signup } from './pages/Signup'
 import { CartPage } from './pages/CartPage'
 import { Billing } from './pages/Billing'
 import { HistoryPage } from './pages/HistoryPage'
+import { AdminDash } from './pages/AdminDashboard'
+import { RoomsDetails } from './pages/RoomDetails'
+import { RoomInsert } from './pages/RoomInsert'
+import { RoomUpdate } from './pages/UpdateRoom'
 
 
 function App() {
@@ -20,6 +24,10 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/bill" element={<Billing />} />
           <Route path="/history" element={<HistoryPage />} />
+          <Route path='/admindash' element={<AdminDash />} />
+          <Route path='/admin/rooms' element={<RoomsDetails />} />
+          <Route path='/admin/rooms/add' element={<RoomInsert />} />
+          <Route path='/admin/rooms/update' element={<RoomUpdate />} />
         </Routes>
       </BrowserRouter>
     </>

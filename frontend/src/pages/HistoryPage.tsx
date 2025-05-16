@@ -1,5 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Button } from "../components/Buttons";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -32,10 +34,13 @@ export function HistoryPage() {
         getHistory()
     }, [])
 
+    const navigate = useNavigate();
+
     return (
         <>
             <div>
                 <h1 className="text-2xl">Order History </h1>
+                <Button onClick={() => navigate("/menupage")}>Back</Button>
                 {history.length === 0 ? (
                     <p>No Orders Found</p>
                 ) : (Array.isArray(history) &&

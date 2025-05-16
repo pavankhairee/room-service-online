@@ -30,7 +30,7 @@ export function Signup() {
 
             <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-slate-500 to-slate-800">
                 <div className="w-fit p-5 space-y-4 rounded bg-white">
-                    <Input type="text" placeholder="Room Number" refInput={nameRef} />
+                    <Input type="text" placeholder="Name " refInput={nameRef} />
                     <Input type="text" placeholder="Room Number" refInput={roomRef} />
                     <Input type="text" placeholder="Phone Number" refInput={phoneRef} />
                     <Input type="text" placeholder="Password" refInput={passwordRef} />
