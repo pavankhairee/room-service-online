@@ -8,8 +8,7 @@ import { Billing } from './pages/Billing'
 import { HistoryPage } from './pages/HistoryPage'
 import { AdminDash } from './pages/AdminDashboard'
 import { RoomsDetails } from './pages/RoomDetails'
-import { RoomInsert } from './pages/RoomInsert'
-import { RoomUpdate } from './pages/UpdateRoom'
+import { MenuDetails } from './pages/MenuDetails'
 
 
 function App() {
@@ -26,8 +25,7 @@ function App() {
           <Route path="/history" element={<HistoryPage />} />
           <Route path='/admindash' element={<AdminDash />} />
           <Route path='/admin/rooms' element={<RoomsDetails />} />
-          <Route path='/admin/rooms/add' element={<RoomInsert />} />
-          <Route path='/admin/rooms/update' element={<RoomUpdate />} />
+          <Route path='/admin/menu' element={<MenuDetails />} />
         </Routes>
       </BrowserRouter>
     </>

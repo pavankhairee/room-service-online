@@ -251,6 +251,15 @@ app.get('/app/admin/allRoom', authenticateAdmin, async (req, res) => {
     })
 })
 
+app.get('/app/admin/allMenu', authenticateAdmin, async (req, res) => {
+    const detailsQuery = `SELECT * FROM menu_items`
+    const response = await pgClient.query(detailsQuery)
+
+    res.json({
+        message: response.rows
+    })
+})
+
 app.post('/app/admin/insertRoom', authenticateAdmin, async (req, res) => {
 
     const { room_number, room_type, status } = req.body;
