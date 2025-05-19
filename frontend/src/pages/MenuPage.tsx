@@ -56,6 +56,7 @@ export function Menu() {
                     <h2 className="text-2xl font-bold ">Menu</h2>
                 </div>
                 <div className="flex gap-4">
+                    <button className="bg-green-600 text-white px-2 py-2  rounded shadow hover:bg-green-700" onClick={() => navigate("/service")}>Room Service</button>
                     <button className="bg-green-600 text-white px-2 py-2  rounded shadow hover:bg-green-700" onClick={() => navigate("/bill")}>Total Bill</button>
                     <button className="bg-green-600 text-white px-2 py-2  rounded shadow hover:bg-green-700" onClick={() => navigate("/history")}>History</button>
                     <button className="bg-green-600 text-white px-2 py-2  rounded shadow hover:bg-green-700" onClick={() => navigate("/cart")}>Go to Cart</button>

@@ -131,14 +131,16 @@ export function AdminDash() {
                         duration-300 p-6 text-center font-medium text-lg cursor-pointer hover:bg-gray-50">
                         Add New Room
                     </div>
-                    <div>
-                        <PopUpModal isOpen={addOpen} onClose={() => setAddOpen(false)}>
+
+                    <PopUpModal isOpen={addOpen} onClose={() => setAddOpen(false)}>
+                        <div className="flex flex-col items-center justify-center space-y-4 w-full max-w-md mx-auto p-6">
                             <Input typeField={"text"} placeholder={"Enter Room Number"} refInput={roomNumberRef} ></Input>
                             <Input typeField={"text"} placeholder={"Enter Room Type"} refInput={roomTypeRef} ></Input>
                             <Input typeField={"text"} placeholder={"Room Status"} refInput={roomStatusRef} ></Input>
                             <Button onClick={addRoomDetails}>Submit</Button>
-                        </PopUpModal>
-                    </div>
+                        </div>
+                    </PopUpModal>
+
                 </div>
 
 
@@ -150,15 +152,17 @@ export function AdminDash() {
                         Update Rooms
                     </div>
 
-                    <div>
-                        <PopUpModal isOpen={upOpen} onClose={() => setUpOpen(false)}>
+
+                    <PopUpModal isOpen={upOpen} onClose={() => setUpOpen(false)}>
+                        <div className="flex flex-col items-center justify-center space-y-4 w-full max-w-md mx-auto p-6">
                             <Input typeField={"text"} placeholder={"Enter Room Id"} refInput={roomIdRef}></Input>
                             <Input typeField={"text"} placeholder={"Enter Room Number"} refInput={roomNumberRef} ></Input>
                             <Input typeField={"text"} placeholder={"Enter Room Type"} refInput={roomTypeRef} ></Input>
                             <Input typeField={"text"} placeholder={"Room Status"} refInput={roomStatusRef} ></Input>
                             <Button onClick={UpdateRoomDetails}>Submit</Button>
-                        </PopUpModal>
-                    </div>
+                        </div>
+                    </PopUpModal>
+
                 </div>
 
                 <div>
@@ -171,11 +175,13 @@ export function AdminDash() {
 
                     <div>
                         <PopUpModal isOpen={menuOpen} onClose={() => setMenuOpen(false)}>
-                            <Input typeField={"text"} placeholder={"Enter Item Name"} refInput={menuNameRef}></Input>
-                            <Input typeField={"text"} placeholder={"Enter Item Description"} refInput={menuDescRef}></Input>
-                            <Input typeField={"text"} placeholder={"Enter Item Price"} refInput={menuPriceRef}></Input>
-                            <Input typeField={"text"} placeholder={"Enter Item Available"} refInput={menuAvailableRef}></Input>
-                            <Button onClick={AddMenuItem}>Submit</Button>
+                            <div className="flex flex-col items-center justify-center space-y-4 w-full max-w-md mx-auto p-6">
+                                <Input typeField={"text"} placeholder={"Enter Item Name"} refInput={menuNameRef}></Input>
+                                <Input typeField={"text"} placeholder={"Enter Item Description"} refInput={menuDescRef}></Input>
+                                <Input typeField={"text"} placeholder={"Enter Item Price"} refInput={menuPriceRef}></Input>
+                                <Input typeField={"text"} placeholder={"Enter Item Available"} refInput={menuAvailableRef}></Input>
+                                <Button onClick={AddMenuItem}>Submit</Button>
+                            </div>
                         </PopUpModal>
                     </div>
                 </div>
@@ -188,16 +194,18 @@ export function AdminDash() {
                         Update Menu Item
                     </div>
 
-                    <div>
-                        <PopUpModal isOpen={menuUpOpen} onClose={() => setMenuUpOpen(false)}>
+
+                    <PopUpModal isOpen={menuUpOpen} onClose={() => setMenuUpOpen(false)}>
+                        <div className="flex flex-col items-center justify-center space-y-4 w-full max-w-md mx-auto p-6">
                             <Input typeField={"text"} placeholder={"Enter Item Id"} refInput={menuIdRef}></Input>
                             <Input typeField={"text"} placeholder={"Enter Item Name"} refInput={menuNameRef}></Input>
                             <Input typeField={"text"} placeholder={"Enter Item Description"} refInput={menuDescRef}></Input>
                             <Input typeField={"text"} placeholder={"Enter Item Price"} refInput={menuPriceRef}></Input>
                             <Input typeField={"text"} placeholder={"Enter Item Available"} refInput={menuAvailableRef}></Input>
                             <Button onClick={UpdateMenuItem}>Submit</Button>
-                        </PopUpModal>
-                    </div>
+                        </div>
+                    </PopUpModal>
+
                 </div>
 
                 <div>

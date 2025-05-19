@@ -9,6 +9,7 @@ import { HistoryPage } from './pages/HistoryPage'
 import { AdminDash } from './pages/AdminDashboard'
 import { RoomsDetails } from './pages/RoomDetails'
 import { MenuDetails } from './pages/MenuDetails'
+import { RoomService } from './pages/RoomService'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/admindash' element={<AdminDash />} />
           <Route path='/admin/rooms' element={<RoomsDetails />} />
           <Route path='/admin/menu' element={<MenuDetails />} />
+          <Route path='/service' element={<RoomService />} />
         </Routes>
       </BrowserRouter>
     </>
